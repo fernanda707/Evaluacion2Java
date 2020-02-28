@@ -9,7 +9,7 @@ public class Electrodomestico implements ICalcular {
 	/**
 	 * Atributos de la clase
 	 */
-	protected double precioBase;
+	private double precioBase;
 	private String color;
 	private char consumoEnergetico;
 	private double peso;
