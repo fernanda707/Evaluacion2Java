@@ -41,14 +41,18 @@ public class Ejecutable {
 			listaElectrodomesticos[9]=electrodomestico2;
 			
 			double total=0;
+			double tv=0;
+			double lv=0;
 			for (Electrodomestico e : listaElectrodomesticos) {
 				if(e instanceof Television) {
 					System.out.println("Precio Television: "+e.precioFinal());
+					tv+=e.precioFinal();
 					total+=e.precioFinal();
 				}else {
 					if(e instanceof Lavadora) {
 						System.out.println("Precio Lavadora: "+e.precioFinal());
 						total+=e.precioFinal();
+						lv+=e.precioFinal();
 					}else {
 						System.out.println("Precio Electrodomestico: "+e.precioFinal());
 						total+=e.precioFinal();
@@ -57,7 +61,10 @@ public class Ejecutable {
 			
 				
 			}
-			System.out.println("SUMA PRECIO TOTAL: "+ total);
+			System.out.println("______________________________________________________________________");
+			System.out.println("PRECIO TOTAL TELEVISIONES: "+ tv);
+			System.out.println("PRECIO TOTAL LAVADORAS: "+ lv);
+			System.out.println("PRECIO TOTAL ELECTRODOMESTICOS: "+ total);
 		} catch (Exception e) {
 			System.out.println("Se produjo une error... Vuelva a intentarlo. "+e.getMessage());
 		}
